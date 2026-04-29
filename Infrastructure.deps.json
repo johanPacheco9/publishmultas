@@ -6,46 +6,29 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Multas/1.0.0": {
+      "Infrastructure/1.0.0": {
         "dependencies": {
-          "Ardalis.GuardClauses": "5.0.0",
+          "Application": "1.0.0",
           "ClosedXML": "0.105.0",
           "Dapper": "2.1.66",
           "DocX": "5.0.0",
           "Domain": "1.0.0",
-          "FirebirdSql.Data.FirebirdClient": "10.3.4",
-          "Humanizer.Core.es": "3.0.10",
-          "Infrastructure": "1.0.0",
+          "Humanizer": "3.0.10",
           "Microsoft.EntityFrameworkCore": "10.0.2",
           "Newtonsoft.Json": "13.0.4",
+          "Npgsql": "10.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.0",
           "PDFsharp": "6.2.4",
-          "PdfSharpCore": "1.3.67",
+          "QuestPDF": "2026.2.3",
           "Radzen.Blazor": "8.7.5",
-          "Serilog.AspNetCore": "10.0.0",
-          "Serilog.Sinks.File": "7.0.0",
-          "SixLabors.ImageSharp": "3.1.12",
-          "System.Drawing.Common": "10.0.2",
-          "iTextSharp.LGPLv2.Core": "3.7.12"
+          "System.ServiceModel.Duplex": "4.10.3",
+          "System.ServiceModel.Federation": "4.10.3",
+          "System.ServiceModel.Http": "4.10.3",
+          "System.ServiceModel.NetTcp": "4.10.3",
+          "System.ServiceModel.Security": "4.10.3"
         },
         "runtime": {
-          "Multas.dll": {}
-        }
-      },
-      "Ardalis.GuardClauses/5.0.0": {
-        "runtime": {
-          "lib/net8.0/Ardalis.GuardClauses.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
-          }
-        }
-      },
-      "BouncyCastle.Cryptography/2.6.2": {
-        "runtime": {
-          "lib/net6.0/BouncyCastle.Cryptography.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.6.2.46322"
-          }
+          "Infrastructure.dll": {}
         }
       },
       "ClosedXML/0.105.0": {
@@ -103,7 +86,7 @@
       },
       "DocX/5.0.0": {
         "dependencies": {
-          "SkiaSharp": "3.119.1",
+          "SkiaSharp": "2.88.8",
           "System.IO.Packaging": "8.0.1"
         },
         "runtime": {
@@ -126,14 +109,6 @@
           "lib/netstandard2.0/ExcelNumberFormat.dll": {
             "assemblyVersion": "1.1.0.0",
             "fileVersion": "1.1.0.0"
-          }
-        }
-      },
-      "FirebirdSql.Data.FirebirdClient/10.3.4": {
-        "runtime": {
-          "lib/net8.0/FirebirdSql.Data.FirebirdClient.dll": {
-            "assemblyVersion": "10.3.4.0",
-            "fileVersion": "10.3.4.0"
           }
         }
       },
@@ -710,18 +685,6 @@
           }
         }
       },
-      "iTextSharp.LGPLv2.Core/3.7.12": {
-        "dependencies": {
-          "BouncyCastle.Cryptography": "2.6.2",
-          "SkiaSharp": "3.119.1"
-        },
-        "runtime": {
-          "lib/net10.0/iTextSharp.LGPLv2.Core.dll": {
-            "assemblyVersion": "3.7.12.0",
-            "fileVersion": "3.7.12.0"
-          }
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -749,22 +712,14 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/10.0.2": {
+      "Microsoft.EntityFrameworkCore.Relational/10.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "10.0.2"
         },
         "runtime": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "10.0.2.0",
-            "fileVersion": "10.0.225.61305"
-          }
-        }
-      },
-      "Microsoft.Extensions.DependencyModel/10.0.2": {
-        "runtime": {
-          "lib/net10.0/Microsoft.Extensions.DependencyModel.dll": {
-            "assemblyVersion": "10.0.0.2",
-            "fileVersion": "10.0.225.61305"
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
           }
         }
       },
@@ -822,22 +777,6 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/10.0.2": {
-        "runtime": {
-          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.225.61305"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.225.61305"
-          }
-        }
-      },
       "Newtonsoft.Json/13.0.4": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -857,7 +796,7 @@
       "Npgsql.EntityFrameworkCore.PostgreSQL/10.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "10.0.2",
-          "Microsoft.EntityFrameworkCore.Relational": "10.0.2",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.0",
           "Npgsql": "10.0.0"
         },
         "runtime": {
@@ -904,24 +843,6 @@
           "lib/net10.0/PdfSharp.dll": {
             "assemblyVersion": "6.2.4.0",
             "fileVersion": "6.2.4.7675"
-          }
-        }
-      },
-      "PdfSharpCore/1.3.67": {
-        "dependencies": {
-          "SharpZipLib": "1.4.2",
-          "SixLabors.Fonts": "1.0.0",
-          "SixLabors.ImageSharp": "3.1.12"
-        },
-        "runtime": {
-          "lib/net8.0/PdfSharpCore.dll": {
-            "assemblyVersion": "1.3.67.0",
-            "fileVersion": "1.3.67.0"
-          }
-        },
-        "resources": {
-          "lib/net8.0/de/PdfSharpCore.resources.dll": {
-            "locale": "de"
           }
         }
       },
@@ -1061,118 +982,6 @@
           }
         }
       },
-      "Serilog/4.3.0": {
-        "runtime": {
-          "lib/net9.0/Serilog.dll": {
-            "assemblyVersion": "4.3.0.0",
-            "fileVersion": "4.3.0.0"
-          }
-        }
-      },
-      "Serilog.AspNetCore/10.0.0": {
-        "dependencies": {
-          "Serilog": "4.3.0",
-          "Serilog.Extensions.Hosting": "10.0.0",
-          "Serilog.Formatting.Compact": "3.0.0",
-          "Serilog.Settings.Configuration": "10.0.0",
-          "Serilog.Sinks.Console": "6.1.1",
-          "Serilog.Sinks.Debug": "3.0.0",
-          "Serilog.Sinks.File": "7.0.0"
-        },
-        "runtime": {
-          "lib/net10.0/Serilog.AspNetCore.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
-          }
-        }
-      },
-      "Serilog.Extensions.Hosting/10.0.0": {
-        "dependencies": {
-          "Serilog": "4.3.0",
-          "Serilog.Extensions.Logging": "10.0.0"
-        },
-        "runtime": {
-          "lib/net10.0/Serilog.Extensions.Hosting.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
-          }
-        }
-      },
-      "Serilog.Extensions.Logging/10.0.0": {
-        "dependencies": {
-          "Serilog": "4.3.0"
-        },
-        "runtime": {
-          "lib/net10.0/Serilog.Extensions.Logging.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
-          }
-        }
-      },
-      "Serilog.Formatting.Compact/3.0.0": {
-        "dependencies": {
-          "Serilog": "4.3.0"
-        },
-        "runtime": {
-          "lib/net8.0/Serilog.Formatting.Compact.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
-          }
-        }
-      },
-      "Serilog.Settings.Configuration/10.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyModel": "10.0.2",
-          "Serilog": "4.3.0"
-        },
-        "runtime": {
-          "lib/net10.0/Serilog.Settings.Configuration.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
-          }
-        }
-      },
-      "Serilog.Sinks.Console/6.1.1": {
-        "dependencies": {
-          "Serilog": "4.3.0"
-        },
-        "runtime": {
-          "lib/net8.0/Serilog.Sinks.Console.dll": {
-            "assemblyVersion": "6.1.1.0",
-            "fileVersion": "6.1.1.0"
-          }
-        }
-      },
-      "Serilog.Sinks.Debug/3.0.0": {
-        "dependencies": {
-          "Serilog": "4.3.0"
-        },
-        "runtime": {
-          "lib/net8.0/Serilog.Sinks.Debug.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
-          }
-        }
-      },
-      "Serilog.Sinks.File/7.0.0": {
-        "dependencies": {
-          "Serilog": "4.3.0"
-        },
-        "runtime": {
-          "lib/net9.0/Serilog.Sinks.File.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.0.0"
-          }
-        }
-      },
-      "SharpZipLib/1.4.2": {
-        "runtime": {
-          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
-            "assemblyVersion": "1.4.2.13",
-            "fileVersion": "1.4.2.13"
-          }
-        }
-      },
       "SixLabors.Fonts/1.0.0": {
         "runtime": {
           "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
@@ -1181,27 +990,19 @@
           }
         }
       },
-      "SixLabors.ImageSharp/3.1.12": {
-        "runtime": {
-          "lib/net6.0/SixLabors.ImageSharp.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.1.12.0"
-          }
-        }
-      },
-      "SkiaSharp/3.119.1": {
+      "SkiaSharp/2.88.8": {
         "dependencies": {
-          "SkiaSharp.NativeAssets.Win32": "3.119.1",
-          "SkiaSharp.NativeAssets.macOS": "3.119.1"
+          "SkiaSharp.NativeAssets.Win32": "2.88.8",
+          "SkiaSharp.NativeAssets.macOS": "2.88.8"
         },
         "runtime": {
-          "lib/net8.0/SkiaSharp.dll": {
-            "assemblyVersion": "3.119.0.0",
-            "fileVersion": "3.119.1.0"
+          "lib/net6.0/SkiaSharp.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.8.0"
           }
         }
       },
-      "SkiaSharp.NativeAssets.macOS/3.119.1": {
+      "SkiaSharp.NativeAssets.macOS/2.88.8": {
         "runtimeTargets": {
           "runtimes/osx/native/libSkiaSharp.dylib": {
             "rid": "osx",
@@ -1210,7 +1011,7 @@
           }
         }
       },
-      "SkiaSharp.NativeAssets.Win32/3.119.1": {
+      "SkiaSharp.NativeAssets.Win32/2.88.8": {
         "runtimeTargets": {
           "runtimes/win-arm64/native/libSkiaSharp.dll": {
             "rid": "win-arm64",
@@ -1226,25 +1027,6 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "System.Drawing.Common/10.0.2": {
-        "dependencies": {
-          "Microsoft.Win32.SystemEvents": "10.0.2"
-        },
-        "runtime": {
-          "lib/net10.0/System.Drawing.Common.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.225.61305"
-          },
-          "lib/net10.0/System.Private.Windows.Core.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.225.61305"
-          },
-          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.225.61305"
           }
         }
       },
@@ -1446,56 +1228,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "Infrastructure/1.0.0": {
-        "dependencies": {
-          "Application": "1.0.0",
-          "ClosedXML": "0.105.0",
-          "Dapper": "2.1.66",
-          "DocX": "5.0.0",
-          "Domain": "1.0.0",
-          "Humanizer": "3.0.10",
-          "Microsoft.EntityFrameworkCore": "10.0.2",
-          "Newtonsoft.Json": "13.0.4",
-          "Npgsql": "10.0.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.0",
-          "PDFsharp": "6.2.4",
-          "QuestPDF": "2026.2.3",
-          "Radzen.Blazor": "8.7.5",
-          "System.ServiceModel.Duplex": "4.10.3",
-          "System.ServiceModel.Federation": "4.10.3",
-          "System.ServiceModel.Http": "4.10.3",
-          "System.ServiceModel.NetTcp": "4.10.3",
-          "System.ServiceModel.Security": "4.10.3"
-        },
-        "runtime": {
-          "Infrastructure.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
   "libraries": {
-    "Multas/1.0.0": {
+    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "Ardalis.GuardClauses/5.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jVPRvLw0xIUFto2cMrKgRYADWIHbEEfzZHGiU/swwNgl1zo28Q1zfSa3VUC3C0s9DyhFDPSaF4dEDQRyTZUcyQ==",
-      "path": "ardalis.guardclauses/5.0.0",
-      "hashPath": "ardalis.guardclauses.5.0.0.nupkg.sha512"
-    },
-    "BouncyCastle.Cryptography/2.6.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7oWOcvnntmMKNzDLsdxAYqApt+AjpRpP2CShjMfIa3umZ42UQMvH0tl1qAliYPNYO6vTdcGMqnRrCPmsfzTI1w==",
-      "path": "bouncycastle.cryptography/2.6.2",
-      "hashPath": "bouncycastle.cryptography.2.6.2.nupkg.sha512"
     },
     "ClosedXML/0.105.0": {
       "type": "package",
@@ -1545,13 +1285,6 @@
       "sha512": "sha512-R3BVHPs9O+RkExbZYTGT0+9HLbi8ZrNij1Yziyw6znd3J7P3uoIR07uwTLGOogtz1p6+0sna66eBoXu7tBiVQA==",
       "path": "excelnumberformat/1.1.0",
       "hashPath": "excelnumberformat.1.1.0.nupkg.sha512"
-    },
-    "FirebirdSql.Data.FirebirdClient/10.3.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lmaY+XQvnhPl1YRrY+lzTZPD88YDbllelN5RhFMrzinqSmjWpWZRE0A4AI1L2mPBNAI346Q8MHAvnJjDPd7VnQ==",
-      "path": "firebirdsql.data.firebirdclient/10.3.4",
-      "hashPath": "firebirdsql.data.firebirdclient.10.3.4.nupkg.sha512"
     },
     "Humanizer/3.0.10": {
       "type": "package",
@@ -1924,13 +1657,6 @@
       "path": "humanizer.core.zh-hant/3.0.10",
       "hashPath": "humanizer.core.zh-hant.3.0.10.nupkg.sha512"
     },
-    "iTextSharp.LGPLv2.Core/3.7.12": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-R0L/0e5rQmI+HOPI3ppBcIzn8PEowwUO9Jd0wRJw9709bFgIYu5fqm384kAyGG9BdZUr+6eQXUucNQ7qc6QLlw==",
-      "path": "itextsharp.lgplv2.core/3.7.12",
-      "hashPath": "itextsharp.lgplv2.core.3.7.12.nupkg.sha512"
-    },
     "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1952,19 +1678,12 @@
       "path": "microsoft.entityframeworkcore.abstractions/10.0.2",
       "hashPath": "microsoft.entityframeworkcore.abstractions.10.0.2.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/10.0.2": {
+    "Microsoft.EntityFrameworkCore.Relational/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1fUeyNmqDNfMogJ2ut7OKO57/WGjjkHMYeX51SpA3PwP7ftbx8g/Z3fbErD+1q14DILrqJfsszYsYhGssBRfDg==",
-      "path": "microsoft.entityframeworkcore.relational/10.0.2",
-      "hashPath": "microsoft.entityframeworkcore.relational.10.0.2.nupkg.sha512"
-    },
-    "Microsoft.Extensions.DependencyModel/10.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-DHXzj/FKmUDmhzw7AHbMXbNNcgO8Cb9PDbYOUDICjFAdIALy2WbC6pm+dFKiAUNtcYMucZu2iMVw1ef/sdcZFw==",
-      "path": "microsoft.extensions.dependencymodel/10.0.2",
-      "hashPath": "microsoft.extensions.dependencymodel.10.0.2.nupkg.sha512"
+      "sha512": "sha512-A3MX1ee7RDxWCUdx/KqP+74fbksz0UIhkVZh56YHvbPkEKsffCXgHU3LGkRDwqR/MrBNWLCWC/IVX79tzM30ZA==",
+      "path": "microsoft.entityframeworkcore.relational/10.0.0",
+      "hashPath": "microsoft.entityframeworkcore.relational.10.0.0.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Logging/6.8.0": {
       "type": "package",
@@ -2001,13 +1720,6 @@
       "path": "microsoft.identitymodel.xml/6.8.0",
       "hashPath": "microsoft.identitymodel.xml.6.8.0.nupkg.sha512"
     },
-    "Microsoft.Win32.SystemEvents/10.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1G4BdeFwc8E95MpwtR7pO4rEh2YCG/o5gqcOszdQRGrWX1ayHTZtho3xPuYZTbBxKb/3kQHjL3b4nQeNGvbM9g==",
-      "path": "microsoft.win32.systemevents/10.0.2",
-      "hashPath": "microsoft.win32.systemevents.10.0.2.nupkg.sha512"
-    },
     "Newtonsoft.Json/13.0.4": {
       "type": "package",
       "serviceable": true,
@@ -2036,13 +1748,6 @@
       "path": "pdfsharp/6.2.4",
       "hashPath": "pdfsharp.6.2.4.nupkg.sha512"
     },
-    "PdfSharpCore/1.3.67": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-6Cvj9nX6RwIJFIQC8eJFCYYUu9Qa2t9LWh4i0SXFi3hqkX/ssUGKfzp+9JZZXbkp0lHeeH/9UYFHelLqIusPrQ==",
-      "path": "pdfsharpcore/1.3.67",
-      "hashPath": "pdfsharpcore.1.3.67.nupkg.sha512"
-    },
     "QuestPDF/2026.2.3": {
       "type": "package",
       "serviceable": true,
@@ -2064,76 +1769,6 @@
       "path": "rbush.signed/4.0.0",
       "hashPath": "rbush.signed.4.0.0.nupkg.sha512"
     },
-    "Serilog/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+cDryFR0GRhsGOnZSKwaDzRRl4MupvJ42FhCE4zhQRVanX0Jpg6WuCBk59OVhVDPmab1bB+nRykAnykYELA9qQ==",
-      "path": "serilog/4.3.0",
-      "hashPath": "serilog.4.3.0.nupkg.sha512"
-    },
-    "Serilog.AspNetCore/10.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-a/cNa1mY4On1oJlfGG1wAvxjp5g7OEzk/Jf/nm7NF9cWoE7KlZw1GldrifUBWm9oKibHkR7Lg/l5jy3y7ACR8w==",
-      "path": "serilog.aspnetcore/10.0.0",
-      "hashPath": "serilog.aspnetcore.10.0.0.nupkg.sha512"
-    },
-    "Serilog.Extensions.Hosting/10.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-E7juuIc+gzoGxgzFooFgAV8g9BfiSXNKsUok9NmEpyAXg2odkcPsMa/Yo4axkJRlh0se7mkYQ1GXDaBemR+b6w==",
-      "path": "serilog.extensions.hosting/10.0.0",
-      "hashPath": "serilog.extensions.hosting.10.0.0.nupkg.sha512"
-    },
-    "Serilog.Extensions.Logging/10.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-vx0kABKl2dWbBhhqAfTOk53/i8aV/5VaT3a6il9gn72Wqs2pM7EK2OB6No6xdqK2IaY6Zf9gdjLuK9BVa2rT+Q==",
-      "path": "serilog.extensions.logging/10.0.0",
-      "hashPath": "serilog.extensions.logging.10.0.0.nupkg.sha512"
-    },
-    "Serilog.Formatting.Compact/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-wQsv14w9cqlfB5FX2MZpNsTawckN4a8dryuNGbebB/3Nh1pXnROHZov3swtu3Nj5oNG7Ba+xdu7Et/ulAUPanQ==",
-      "path": "serilog.formatting.compact/3.0.0",
-      "hashPath": "serilog.formatting.compact.3.0.0.nupkg.sha512"
-    },
-    "Serilog.Settings.Configuration/10.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LNq+ibS1sbhTqPV1FIE69/9AJJbfaOhnaqkzcjFy95o+4U+STsta9mi97f1smgXsWYKICDeGUf8xUGzd/52/uA==",
-      "path": "serilog.settings.configuration/10.0.0",
-      "hashPath": "serilog.settings.configuration.10.0.0.nupkg.sha512"
-    },
-    "Serilog.Sinks.Console/6.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8jbqgjUyZlfCuSTaJk6lOca465OndqOz3KZP6Cryt/IqZYybyBu7GP0fE/AXBzrrQB3EBmQntBFAvMVz1COvAA==",
-      "path": "serilog.sinks.console/6.1.1",
-      "hashPath": "serilog.sinks.console.6.1.1.nupkg.sha512"
-    },
-    "Serilog.Sinks.Debug/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-4BzXcdrgRX7wde9PmHuYd9U6YqycCC28hhpKonK7hx0wb19eiuRj16fPcPSVp0o/Y1ipJuNLYQ00R3q2Zs8FDA==",
-      "path": "serilog.sinks.debug/3.0.0",
-      "hashPath": "serilog.sinks.debug.3.0.0.nupkg.sha512"
-    },
-    "Serilog.Sinks.File/7.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-fKL7mXv7qaiNBUC71ssvn/dU0k9t0o45+qm2XgKAlSt19xF+ijjxyA3R6HmCgfKEKwfcfkwWjayuQtRueZFkYw==",
-      "path": "serilog.sinks.file/7.0.0",
-      "hashPath": "serilog.sinks.file.7.0.0.nupkg.sha512"
-    },
-    "SharpZipLib/1.4.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-yjj+3zgz8zgXpiiC3ZdF/iyTBbz2fFvMxZFEBPUcwZjIvXOf37Ylm+K58hqMfIBt5JgU/Z2uoUS67JmTLe973A==",
-      "path": "sharpziplib/1.4.2",
-      "hashPath": "sharpziplib.1.4.2.nupkg.sha512"
-    },
     "SixLabors.Fonts/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2141,40 +1776,26 @@
       "path": "sixlabors.fonts/1.0.0",
       "hashPath": "sixlabors.fonts.1.0.0.nupkg.sha512"
     },
-    "SixLabors.ImageSharp/3.1.12": {
+    "SkiaSharp/2.88.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iAg6zifihXEFS/t7fiHhZBGAdCp3FavsF4i2ZIDp0JfeYeDVzvmlbY1CNhhIKimaIzrzSi5M/NBFcWvZT2rB/A==",
-      "path": "sixlabors.imagesharp/3.1.12",
-      "hashPath": "sixlabors.imagesharp.3.1.12.nupkg.sha512"
+      "sha512": "sha512-bRkp3uKp5ZI8gXYQT57uKwil1uobb2p8c69n7v5evlB/2JNcMAXVcw9DZAP5Ig3WSvgzGm2YSn27UVeOi05NlA==",
+      "path": "skiasharp/2.88.8",
+      "hashPath": "skiasharp.2.88.8.nupkg.sha512"
     },
-    "SkiaSharp/3.119.1": {
+    "SkiaSharp.NativeAssets.macOS/2.88.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+Ru1BTSZQne3Vp+vbSb50Ke3Nlc3ZnItxx4+751J9WZ8YzLKAV/n+9DAo4zFTyeCI//ueT63c+VybmTTpYBEiw==",
-      "path": "skiasharp/3.119.1",
-      "hashPath": "skiasharp.3.119.1.nupkg.sha512"
+      "sha512": "sha512-6Kn5TSkKlfyS6azWHF3Jk2sW5C4jCE5uSshM/5AbfFrR+5n6qM5XEnz9h4VaVl7LTxBvHvMkuPb/3bpbq0vxTw==",
+      "path": "skiasharp.nativeassets.macos/2.88.8",
+      "hashPath": "skiasharp.nativeassets.macos.2.88.8.nupkg.sha512"
     },
-    "SkiaSharp.NativeAssets.macOS/3.119.1": {
+    "SkiaSharp.NativeAssets.Win32/2.88.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6hR3BdLhApjDxR1bFrJ7/lMydPfI01s3K+3WjIXFUlfC0MFCFCwRzv+JtzIkW9bDXs7XUVQS+6EVf0uzCasnGQ==",
-      "path": "skiasharp.nativeassets.macos/3.119.1",
-      "hashPath": "skiasharp.nativeassets.macos.3.119.1.nupkg.sha512"
-    },
-    "SkiaSharp.NativeAssets.Win32/3.119.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8C4GSXVJqSr0y3Tyyv5jz6MJSTVUyYkMjeKrzK+VyZPGLo89MNoUEclVuYahzOCDdtbfXrd2HtxXfDuvoSXrUw==",
-      "path": "skiasharp.nativeassets.win32/3.119.1",
-      "hashPath": "skiasharp.nativeassets.win32.3.119.1.nupkg.sha512"
-    },
-    "System.Drawing.Common/10.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nCq8jeGD4vWaUjX3nGaDMKYqfFPposw2f4KCFnuY5Rt3NhK6zMZ/c0a52a3TZK/nnkCJfyQMwb+POKwAnZexZw==",
-      "path": "system.drawing.common/10.0.2",
-      "hashPath": "system.drawing.common.10.0.2.nupkg.sha512"
+      "sha512": "sha512-O9QXoWEXA+6cweR4h3BOnwMz+pO9vL9mXdjLrpDd0w1QzCgWmLQBxa1VgySDITiH7nQndrDG1h6937zm9pLj1Q==",
+      "path": "skiasharp.nativeassets.win32/2.88.8",
+      "hashPath": "skiasharp.nativeassets.win32.2.88.8.nupkg.sha512"
     },
     "System.IO.Packaging/8.0.1": {
       "type": "package",
@@ -2238,11 +1859,6 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
